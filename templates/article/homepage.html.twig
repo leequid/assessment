@@ -1,9 +1,10 @@
 {%extends 'base.html.twig'%}
 
-{%block title%}haha{%endblock%}
+{%block title%}{{title}}{%endblock%}
 
 {%block body%}
+<div {{stimulus_controller('article-controls')}}></div>
 <h1>{{title}}</h1>
 
-<div>asdffff</div>
+<div>{{content | striptags }}</div>
 {%endblock%}
